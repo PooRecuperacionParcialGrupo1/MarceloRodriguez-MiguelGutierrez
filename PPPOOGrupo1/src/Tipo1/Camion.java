@@ -8,6 +8,22 @@ package Tipo1;
  *
  * @author Usuario
  */
-public class Camion {
+public class Camion extends Vehiculo{
+
+    int capacidadCargaToneladas;
+    String atriDestino;
+    float atriDistancia;
+
+    public Camion(int capacidadCargaToneladas, String placa, String modelo, String marca) {
+        super(placa, modelo, marca);
+        this.capacidadCargaToneladas = capacidadCargaToneladas;
+    }
+    
+    
+        
+    @Override
+    float calcularAutonomia() {
+        return 0;
+    }
     
 }
