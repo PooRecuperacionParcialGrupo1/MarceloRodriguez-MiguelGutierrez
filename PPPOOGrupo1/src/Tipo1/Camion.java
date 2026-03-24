@@ -4,26 +4,32 @@
  */
 package Tipo1;
 
-/**
- *
- * @author Usuario
- */
-public class Camion extends Vehiculo{
+public abstract class Camion extends Vehiculo{
 
-    int capacidadCargaToneladas;
-    String atriDestino;
-    float atriDistancia;
+    // PUNTO 1: El examen exige que sea double
+    public double capacidadCargaToneladas;
 
-    public Camion(int capacidadCargaToneladas, String placa, String modelo, String marca) {
+    public Camion(double capacidadCargaToneladas, String placa, String modelo, String marca) {
         super(placa, modelo, marca);
         this.capacidadCargaToneladas = capacidadCargaToneladas;
     }
     
-    
-        
+    // PUNTO 1: Simular cálculo basado en peso
     @Override
-    float calcularAutonomia() {
-        return 0;
+    public double calcularAutonomia() {
+        return 1500.0 - (capacidadCargaToneladas * 12.5); // Simulación
     }
     
+    // PUNTO 2: Tres métodos sobrecargados asignarRuta()
+    public void asignarRuta() {
+        System.out.println("Ruta estándar asignada. Sin destino específico aún.");
+    }
+    
+    public void asignarRuta(String atrDestino) {
+        System.out.println("Ruta asignada con destino a: " + atrDestino);
+    }
+    
+    public void asignarRuta(String atrDestino, double atrDistanciaKm) {
+        System.out.println("Ruta asignada al destino " + atrDestino + ". Distancia total: " + atrDistanciaKm + " km. Preparando logística pesada.");
+    }
 }

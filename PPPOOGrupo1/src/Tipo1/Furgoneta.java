@@ -17,7 +17,7 @@ public class Furgoneta extends Vehiculo{
     }
    
    @Override
-   float calcularAutonomia(){
+   public double calcularAutonomia(){
        return 0;
    }
    public void asignarRuta(){
