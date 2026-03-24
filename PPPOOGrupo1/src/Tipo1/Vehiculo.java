@@ -11,9 +11,9 @@ import java.util.Objects;
  * @author Usuario
  */
 public abstract class Vehiculo {
-    String placa;
-    String modelo;
-    String marca;
+    public String placa;
+    public String modelo;
+    public String marca;
 
     public Vehiculo(String placa, String modelo, String marca) {
         this.placa = placa;
@@ -46,6 +46,10 @@ public abstract class Vehiculo {
         }
         final Vehiculo other = (Vehiculo) obj;
         return Objects.equals(this.placa, other.placa);
+    }
+
+    public boolean mostrarInfoGeneral() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
 
